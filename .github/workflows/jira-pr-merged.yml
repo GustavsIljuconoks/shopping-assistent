@@ -47,7 +47,7 @@ jobs:
       - name: Delete head branch
         if: steps.extract.outputs.should_run == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GH_PR_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
           BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |

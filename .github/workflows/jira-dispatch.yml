@@ -29,7 +29,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          token: ${{ secrets.GH_PR_TOKEN }}
           fetch-depth: 0
 
       - name: Configure git identity
@@ -100,7 +99,7 @@ jobs:
         if: env.SHOULD_RUN == 'true' && env.KIND == 'pr'
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GH_PR_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: node .github/scripts/jira-dispatch.mjs ensure-pr
 
       - name: Comment back on Jira
