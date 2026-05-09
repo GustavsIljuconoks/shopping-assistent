@@ -1,0 +1,788 @@
+{
+  "created": [
+    {
+      "key": "KAN-2",
+      "type": "Epic",
+      "title": "M-A — Foundations",
+      "fingerprint": "27b2811d60528f65c01c35d205d6d908cf75bc407fb040d243f4a6c830ba9b89",
+      "url": "https://factory2.atlassian.net/browse/KAN-2"
+    },
+    {
+      "key": "KAN-3",
+      "type": "Task",
+      "title": "Shopping profile schema and persistence",
+      "fingerprint": "a86e6ec774425034c90b37013651de935bf92cb7bfb58341b483ca0a33df22ec",
+      "url": "https://factory2.atlassian.net/browse/KAN-3",
+      "parentKey": "KAN-2"
+    },
+    {
+      "key": "KAN-4",
+      "type": "Subtask",
+      "title": "Design and document schema",
+      "fingerprint": "b1cc8b6eab37211dbd8f67629538b858fa75322dfca04c8bb5d09ef26969db32",
+      "url": "https://factory2.atlassian.net/browse/KAN-4",
+      "parentKey": "KAN-3"
+    },
+    {
+      "key": "KAN-5",
+      "type": "Subtask",
+      "title": "Implement storage and read/write APIs",
+      "fingerprint": "43db84bab7aecb4fe94e9d24afe58c6317393cbba7b5ffab9d7065ec47ca503e",
+      "url": "https://factory2.atlassian.net/browse/KAN-5",
+      "parentKey": "KAN-3"
+    },
+    {
+      "key": "KAN-6",
+      "type": "Task",
+      "title": "Shopping audit log schema and persistence",
+      "fingerprint": "7d6b5d3c7e3fcb510f92cd214e85c214b43cb339626cad3fd3a9616d8220ab96",
+      "url": "https://factory2.atlassian.net/browse/KAN-6",
+      "parentKey": "KAN-2"
+    },
+    {
+      "key": "KAN-7",
+      "type": "Subtask",
+      "title": "Define audit log entry schema",
+      "fingerprint": "8b74da58fc960746b434e84949b11151299ec117f7964f8f7b3f3fabeca2e29f",
+      "url": "https://factory2.atlassian.net/browse/KAN-7",
+      "parentKey": "KAN-6"
+    },
+    {
+      "key": "KAN-8",
+      "type": "Subtask",
+      "title": "Implement append-only audit store",
+      "fingerprint": "51c539049e107a8fb63b0dfec7f57fbc9ae93bb232cc1f71af058e9873a36acc",
+      "url": "https://factory2.atlassian.net/browse/KAN-8",
+      "parentKey": "KAN-6"
+    },
+    {
+      "key": "KAN-9",
+      "type": "Task",
+      "title": "Settings → Shopping pane (empty shell)",
+      "fingerprint": "a0775a7775480a072297d3546872147011c67852cf86f1303fe654c741bb30c0",
+      "url": "https://factory2.atlassian.net/browse/KAN-9",
+      "parentKey": "KAN-2"
+    },
+    {
+      "key": "KAN-10",
+      "type": "Subtask",
+      "title": "Add Settings → Shopping route and entry",
+      "fingerprint": "9e5580b6d4a88c6262661e751ab816f2466c002839547949c7266097bb2418c0",
+      "url": "https://factory2.atlassian.net/browse/KAN-10",
+      "parentKey": "KAN-9"
+    },
+    {
+      "key": "KAN-11",
+      "type": "Task",
+      "title": "Settings → Privacy → Shopping activity pane (empty shell)",
+      "fingerprint": "2e837abb70a279773b76f43b5b46deb10614ba9ed64198da0910176520da190b",
+      "url": "https://factory2.atlassian.net/browse/KAN-11",
+      "parentKey": "KAN-2"
+    },
+    {
+      "key": "KAN-12",
+      "type": "Subtask",
+      "title": "Add Privacy → Shopping activity route and entry",
+      "fingerprint": "c5a2626041bc7b9a1156ac91407472101ac3002e7596b61e9e845cf1bb8cfc37",
+      "url": "https://factory2.atlassian.net/browse/KAN-12",
+      "parentKey": "KAN-11"
+    },
+    {
+      "key": "KAN-13",
+      "type": "Epic",
+      "title": "M-B — First retailer connected (Asket)",
+      "fingerprint": "cfecd780823d6b57ee4a3f0dc990785ff58c1127b2d70674147c211041c100bc",
+      "url": "https://factory2.atlassian.net/browse/KAN-13"
+    },
+    {
+      "key": "KAN-14",
+      "type": "Task",
+      "title": "Isolated per-retailer browser profile management",
+      "fingerprint": "2ec2b8b64b06b7b463cf9eaffcc810da1808fde098a88ff1113ff910849944c8",
+      "url": "https://factory2.atlassian.net/browse/KAN-14",
+      "parentKey": "KAN-13"
+    },
+    {
+      "key": "KAN-15",
+      "type": "Subtask",
+      "title": "Implement profile directory provisioning",
+      "fingerprint": "3a672938031a4a2c2188ff7bdf2022a8586a1a724217b1d369cb3f83821c69b9",
+      "url": "https://factory2.atlassian.net/browse/KAN-15",
+      "parentKey": "KAN-14"
+    },
+    {
+      "key": "KAN-16",
+      "type": "Subtask",
+      "title": "Implement per-retailer Disconnect",
+      "fingerprint": "e8474ff70e236a10a0acc5e647b5ec841e08aa5951a7c1d9bdd38feb0ee5f884",
+      "url": "https://factory2.atlassian.net/browse/KAN-16",
+      "parentKey": "KAN-14"
+    },
+    {
+      "key": "KAN-17",
+      "type": "Task",
+      "title": "Visible automation browser: launch, foreground, background",
+      "fingerprint": "d3d711bcad519b43a51c7e717642daa3135b114ddd705f42ed44181ffc75e2a7",
+      "url": "https://factory2.atlassian.net/browse/KAN-17",
+      "parentKey": "KAN-13"
+    },
+    {
+      "key": "KAN-18",
+      "type": "Subtask",
+      "title": "Launch browser with distinct title and correct profile",
+      "fingerprint": "fbb2850798fc6bc73724a40fcc272f9832253c2c8abc09016a9398c8ccb6eba7",
+      "url": "https://factory2.atlassian.net/browse/KAN-18",
+      "parentKey": "KAN-17"
+    },
+    {
+      "key": "KAN-19",
+      "type": "Subtask",
+      "title": "Implement foreground/background logic",
+      "fingerprint": "3ae2bbc6297f988a52122136b6f05b679048a7f32d0ddf6c6abfc82d3052a3f3",
+      "url": "https://factory2.atlassian.net/browse/KAN-19",
+      "parentKey": "KAN-17"
+    },
+    {
+      "key": "KAN-20",
+      "type": "Subtask",
+      "title": "Add headless toggle",
+      "fingerprint": "3044d28eb4e35e3e515069dad5ed4e73dbc6af4dadb5d1924fe28931a3fc86d2",
+      "url": "https://factory2.atlassian.net/browse/KAN-20",
+      "parentKey": "KAN-17"
+    },
+    {
+      "key": "KAN-21",
+      "type": "Task",
+      "title": "Asket: login flow and session management",
+      "fingerprint": "e2ad98d2feab638db45ac501d2488b022e656ad462691c648dd91de2862a6ba7",
+      "url": "https://factory2.atlassian.net/browse/KAN-21",
+      "parentKey": "KAN-13"
+    },
+    {
+      "key": "KAN-22",
+      "type": "Subtask",
+      "title": "Implement Asket login initiation and session capture",
+      "fingerprint": "50c1d1d5c76568038e7fe8a8c1cec149e21245ac59bac480fedc0d982d2169b5",
+      "url": "https://factory2.atlassian.net/browse/KAN-22",
+      "parentKey": "KAN-21"
+    },
+    {
+      "key": "KAN-23",
+      "type": "Subtask",
+      "title": "Show retailer connection status in Settings",
+      "fingerprint": "029d4367303eebe118bd010a99fad49d14f55cb8f9cea646c19742ffdbb3e0b9",
+      "url": "https://factory2.atlassian.net/browse/KAN-23",
+      "parentKey": "KAN-21"
+    },
+    {
+      "key": "KAN-24",
+      "type": "Task",
+      "title": "Asket: cart-staging recipe",
+      "fingerprint": "b0123f988245de669c6c01cfd6f9e1fb7f501fd81a756004a8817f0bdc3d68c9",
+      "url": "https://factory2.atlassian.net/browse/KAN-24",
+      "parentKey": "KAN-13"
+    },
+    {
+      "key": "KAN-25",
+      "type": "Subtask",
+      "title": "Write Asket cart-add Playwright recipe",
+      "fingerprint": "a680f2a6d8d88b74dec39deef290ad4a2cfcf12aade307b52787e6c54e8fc222",
+      "url": "https://factory2.atlassian.net/browse/KAN-25",
+      "parentKey": "KAN-24"
+    },
+    {
+      "key": "KAN-26",
+      "type": "Subtask",
+      "title": "Handle error cases in Asket recipe",
+      "fingerprint": "c48e863d02b51461ec4515e3c8bcbe9560504ad6be069dbcdd7aafe67c8223d6",
+      "url": "https://factory2.atlassian.net/browse/KAN-26",
+      "parentKey": "KAN-24"
+    },
+    {
+      "key": "KAN-27",
+      "type": "Subtask",
+      "title": "Integrate audit logging into recipe",
+      "fingerprint": "30dd982466d7f1d5351408705db801625dba069a5470c7b27cee889c8db7581a",
+      "url": "https://factory2.atlassian.net/browse/KAN-27",
+      "parentKey": "KAN-24"
+    },
+    {
+      "key": "KAN-28",
+      "type": "Epic",
+      "title": "M-C — First useful end-to-end conversation (Asket-only)",
+      "fingerprint": "c1619e705d707796c80a4f550a4e82042d961d52cbad760bba028de4ed9b4d30",
+      "url": "https://factory2.atlassian.net/browse/KAN-28"
+    },
+    {
+      "key": "KAN-29",
+      "type": "Task",
+      "title": "Asket: product search tool",
+      "fingerprint": "2c01a01b4717f85da593def8eb5fda9df2953f0c34918c1eb3b7172e04b4a285",
+      "url": "https://factory2.atlassian.net/browse/KAN-29",
+      "parentKey": "KAN-28"
+    },
+    {
+      "key": "KAN-30",
+      "type": "Subtask",
+      "title": "Implement Asket search automation",
+      "fingerprint": "742bdb99c3540803013e7ecc392b22fba1f106cb70883494981e0b562448d9d8",
+      "url": "https://factory2.atlassian.net/browse/KAN-30",
+      "parentKey": "KAN-29"
+    },
+    {
+      "key": "KAN-31",
+      "type": "Subtask",
+      "title": "Rank and filter candidates",
+      "fingerprint": "3ba0f72727802586a8ecad1a2b583391983cb34edb3371e2b00795ccf022cae6",
+      "url": "https://factory2.atlassian.net/browse/KAN-31",
+      "parentKey": "KAN-29"
+    },
+    {
+      "key": "KAN-32",
+      "type": "Task",
+      "title": "Shopping intent detection and clarification flow in chat",
+      "fingerprint": "146d8578fa86e01ca8fa7ef5bd50d30e5d4e863932242f87c1f695b286138c3d",
+      "url": "https://factory2.atlassian.net/browse/KAN-32",
+      "parentKey": "KAN-28"
+    },
+    {
+      "key": "KAN-33",
+      "type": "Subtask",
+      "title": "Implement intent detection and missing-context elicitation",
+      "fingerprint": "6be9781a74aed269269ee66e164df6d6a5f6762dd54e494d2142bb15956dd9fd",
+      "url": "https://factory2.atlassian.net/browse/KAN-33",
+      "parentKey": "KAN-32"
+    },
+    {
+      "key": "KAN-34",
+      "type": "Subtask",
+      "title": "Wire search dispatch and proposal rendering",
+      "fingerprint": "efab49f14ac6f858178d380dcf51ca39a6f984d067173a08f36d782ee595d1b3",
+      "url": "https://factory2.atlassian.net/browse/KAN-34",
+      "parentKey": "KAN-32"
+    },
+    {
+      "key": "KAN-35",
+      "type": "Task",
+      "title": "Per-retailer proposal card UI",
+      "fingerprint": "e2c5a8de40edfb66a06c91eb64fbe77fd56a8156a2ceda23470a1d34c332e61a",
+      "url": "https://factory2.atlassian.net/browse/KAN-35",
+      "parentKey": "KAN-28"
+    },
+    {
+      "key": "KAN-36",
+      "type": "Subtask",
+      "title": "Build candidate row component",
+      "fingerprint": "a64bfa4d7c9f73b9b1c1d62ac2b13505164ce02980379833e8dde76fab673836",
+      "url": "https://factory2.atlassian.net/browse/KAN-36",
+      "parentKey": "KAN-35"
+    },
+    {
+      "key": "KAN-37",
+      "type": "Subtask",
+      "title": "Build proposal card container and stage CTA",
+      "fingerprint": "2a14f06158a7dce386210c05151143e13a26cf39961ee70393f402f9a4784f73",
+      "url": "https://factory2.atlassian.net/browse/KAN-37",
+      "parentKey": "KAN-35"
+    },
+    {
+      "key": "KAN-38",
+      "type": "Subtask",
+      "title": "Transform card to result card after staging",
+      "fingerprint": "2edcec7d2cc62fa8c4a28294b0413e0912951f47aa4b395a8518011653e3606e",
+      "url": "https://factory2.atlassian.net/browse/KAN-38",
+      "parentKey": "KAN-35"
+    },
+    {
+      "key": "KAN-39",
+      "type": "Task",
+      "title": "Accept → stage flow (Asket)",
+      "fingerprint": "e467bd83b8ba732df2b86f187bae45f7639e50aac6411e84ca622b6c834ab47d",
+      "url": "https://factory2.atlassian.net/browse/KAN-39",
+      "parentKey": "KAN-28"
+    },
+    {
+      "key": "KAN-40",
+      "type": "Subtask",
+      "title": "Implement staging orchestrator",
+      "fingerprint": "985e890ae28ae3cbd9353926eeadec16547bcfbd46d740cef4c8b39fc9a91904",
+      "url": "https://factory2.atlassian.net/browse/KAN-40",
+      "parentKey": "KAN-39"
+    },
+    {
+      "key": "KAN-41",
+      "type": "Subtask",
+      "title": "Update Active carts strip on staging success",
+      "fingerprint": "e0ee351b9a4d999292e2d760818cf508841796a45d2d757c1ecb94b75a7b639d",
+      "url": "https://factory2.atlassian.net/browse/KAN-41",
+      "parentKey": "KAN-39"
+    },
+    {
+      "key": "KAN-42",
+      "type": "Task",
+      "title": "Active carts strip (in-chat)",
+      "fingerprint": "eb6e47da6ba4dbc0c7507bc00414915f259ad1a5beda66d59195811f24f7a8b4",
+      "url": "https://factory2.atlassian.net/browse/KAN-42",
+      "parentKey": "KAN-28"
+    },
+    {
+      "key": "KAN-43",
+      "type": "Subtask",
+      "title": "Build Active carts strip component",
+      "fingerprint": "5ccfc1c034a89954d42e04824a4b13feb4c07366dafe66adf0cd675c54289d20",
+      "url": "https://factory2.atlassian.net/browse/KAN-43",
+      "parentKey": "KAN-42"
+    },
+    {
+      "key": "KAN-44",
+      "type": "Epic",
+      "title": "M-D — Personalization",
+      "fingerprint": "4cba4fd5559f24186397cb6ec03505ae4cbd360db9bdf63a5b3e3ceb3d21f1d8",
+      "url": "https://factory2.atlassian.net/browse/KAN-44"
+    },
+    {
+      "key": "KAN-45",
+      "type": "Task",
+      "title": "Lazy bootstrap on first shopping chat",
+      "fingerprint": "37d4d965f5a9cadf3bb96f394e85d6b7084ea05c4a7f4138651c0f4119404f4a",
+      "url": "https://factory2.atlassian.net/browse/KAN-45",
+      "parentKey": "KAN-44"
+    },
+    {
+      "key": "KAN-46",
+      "type": "Subtask",
+      "title": "Implement missing-field detection and inline elicitation",
+      "fingerprint": "0f51b70ccfd761c3f5d2a8f5bf2e2773165fbc2cc5eac0a3d2545d02c96115a8",
+      "url": "https://factory2.atlassian.net/browse/KAN-46",
+      "parentKey": "KAN-45"
+    },
+    {
+      "key": "KAN-47",
+      "type": "Subtask",
+      "title": "Build one-tap confirmation card",
+      "fingerprint": "e059c1bef210e3db8661134610bcc098542fd58ad53ba11a4a7828c24fc799ed",
+      "url": "https://factory2.atlassian.net/browse/KAN-47",
+      "parentKey": "KAN-45"
+    },
+    {
+      "key": "KAN-48",
+      "type": "Task",
+      "title": "Shopping memories (soft taste accumulation)",
+      "fingerprint": "150f37bb1e31457a32a7fe787382bf05a386cd0081bba5ec12594ed22581ddd4",
+      "url": "https://factory2.atlassian.net/browse/KAN-48",
+      "parentKey": "KAN-44"
+    },
+    {
+      "key": "KAN-49",
+      "type": "Subtask",
+      "title": "Tag and store shopping memories",
+      "fingerprint": "e38d8dfbc6f8e6a801bed2a132cc094a6e35b5014f454d3933fa69dc4a24ec3e",
+      "url": "https://factory2.atlassian.net/browse/KAN-49",
+      "parentKey": "KAN-48"
+    },
+    {
+      "key": "KAN-50",
+      "type": "Subtask",
+      "title": "Post-staging outcome prompt (once per staged item)",
+      "fingerprint": "9dd877f4753cb4b782b27b1c59e31c665dc61d723672c37691b9cd5eb5df76ae",
+      "url": "https://factory2.atlassian.net/browse/KAN-50",
+      "parentKey": "KAN-48"
+    },
+    {
+      "key": "KAN-51",
+      "type": "Subtask",
+      "title": "Implement Clear shopping memories scoped wipe",
+      "fingerprint": "fab08fd1e1a7413b353e5e147946e95fd7e4d299f836411db2d51b97598b3afb",
+      "url": "https://factory2.atlassian.net/browse/KAN-51",
+      "parentKey": "KAN-48"
+    },
+    {
+      "key": "KAN-52",
+      "type": "Task",
+      "title": "Settings → Shopping pane: fully populated and editable",
+      "fingerprint": "726c1da8b547643e60f4d4a42438e283edc34aecf71106d0d10dd97a674ee600",
+      "url": "https://factory2.atlassian.net/browse/KAN-52",
+      "parentKey": "KAN-44"
+    },
+    {
+      "key": "KAN-53",
+      "type": "Subtask",
+      "title": "Render and wire all profile fields",
+      "fingerprint": "e29851dbcafcb0dfd4916727e5aff8a35d3374f73ea078fef563e13e216c4182",
+      "url": "https://factory2.atlassian.net/browse/KAN-53",
+      "parentKey": "KAN-52"
+    },
+    {
+      "key": "KAN-54",
+      "type": "Epic",
+      "title": "M-E — All five retailers",
+      "fingerprint": "bf78c85e3a94f81c7445ce78fd43824d53678cec4ecfa4959df4ccdef6532974",
+      "url": "https://factory2.atlassian.net/browse/KAN-54"
+    },
+    {
+      "key": "KAN-55",
+      "type": "Task",
+      "title": "Zalando.lv: search and cart-staging recipe",
+      "fingerprint": "b37197a9a7c423de68fee1c3a712584a3de9e0c49633f3639bad80b2c5a715e2",
+      "url": "https://factory2.atlassian.net/browse/KAN-55",
+      "parentKey": "KAN-54"
+    },
+    {
+      "key": "KAN-56",
+      "type": "Subtask",
+      "title": "Zalando.lv login and session management",
+      "fingerprint": "d89b79ed838db6cf9f4c649c72ce1f4549f4b11edfdf4b84e9508f5cdf3bfbb3",
+      "url": "https://factory2.atlassian.net/browse/KAN-56",
+      "parentKey": "KAN-55"
+    },
+    {
+      "key": "KAN-57",
+      "type": "Subtask",
+      "title": "Zalando.lv search automation",
+      "fingerprint": "49aea81b2b468434bca6243ab686d9ade371e2fcb875b4a6a15a163e252f9238",
+      "url": "https://factory2.atlassian.net/browse/KAN-57",
+      "parentKey": "KAN-55"
+    },
+    {
+      "key": "KAN-58",
+      "type": "Subtask",
+      "title": "Zalando.lv cart-staging recipe",
+      "fingerprint": "e9d6bc0f537925142039c2dd8fcc648c5ec1c5be01ea23a1b8cb102f549f9fd3",
+      "url": "https://factory2.atlassian.net/browse/KAN-58",
+      "parentKey": "KAN-55"
+    },
+    {
+      "key": "KAN-59",
+      "type": "Task",
+      "title": "About You: search and cart-staging recipe",
+      "fingerprint": "89cd72d648f6a5ee8b43c4fbc73bbfafbd6dafc3b11f5cdde16d423c18c38d31",
+      "url": "https://factory2.atlassian.net/browse/KAN-59",
+      "parentKey": "KAN-54"
+    },
+    {
+      "key": "KAN-60",
+      "type": "Subtask",
+      "title": "About You login and session management",
+      "fingerprint": "d323c7ae55cff835560cebb1939f5965180db56a4fa5b7b6382ced7ea317fd4d",
+      "url": "https://factory2.atlassian.net/browse/KAN-60",
+      "parentKey": "KAN-59"
+    },
+    {
+      "key": "KAN-61",
+      "type": "Subtask",
+      "title": "About You search automation",
+      "fingerprint": "4a287b6bc486e4d8c88cfce8a7f627e8c8139fd8e2bc2fe9167098c84f6582a7",
+      "url": "https://factory2.atlassian.net/browse/KAN-61",
+      "parentKey": "KAN-59"
+    },
+    {
+      "key": "KAN-62",
+      "type": "Subtask",
+      "title": "About You cart-staging recipe",
+      "fingerprint": "356a8c6814e52504a32f7e1eabe7957c85b74a1cf1f6248b434bd1888e15e867",
+      "url": "https://factory2.atlassian.net/browse/KAN-62",
+      "parentKey": "KAN-59"
+    },
+    {
+      "key": "KAN-63",
+      "type": "Task",
+      "title": "Asos: search and cart-staging recipe",
+      "fingerprint": "b2497f161d91b1645762db5a9e890165c9d661a259042f3430248a458dd3e524",
+      "url": "https://factory2.atlassian.net/browse/KAN-63",
+      "parentKey": "KAN-54"
+    },
+    {
+      "key": "KAN-64",
+      "type": "Subtask",
+      "title": "Asos login and session management",
+      "fingerprint": "85e4a3160db7dbb7b51e5329764c6e427fc46446b0e5f38cef4cef4036209c56",
+      "url": "https://factory2.atlassian.net/browse/KAN-64",
+      "parentKey": "KAN-63"
+    },
+    {
+      "key": "KAN-65",
+      "type": "Subtask",
+      "title": "Asos search automation",
+      "fingerprint": "9a71a72f1648eeb0be3959515f6250819b1c34686f7db77230830297a158c368",
+      "url": "https://factory2.atlassian.net/browse/KAN-65",
+      "parentKey": "KAN-63"
+    },
+    {
+      "key": "KAN-66",
+      "type": "Subtask",
+      "title": "Asos cart-staging recipe with challenge handling",
+      "fingerprint": "f4720280632c913aa848562b74cd732e2a387a13adb4cd2af26169ec5a946795",
+      "url": "https://factory2.atlassian.net/browse/KAN-66",
+      "parentKey": "KAN-63"
+    },
+    {
+      "key": "KAN-67",
+      "type": "Task",
+      "title": "H&M.lv: search and cart-staging recipe",
+      "fingerprint": "803a31ee9fc1f1096cdf9b7ad675f581dbdbdf818e3f503ddc7b23bdc28c5b0d",
+      "url": "https://factory2.atlassian.net/browse/KAN-67",
+      "parentKey": "KAN-54"
+    },
+    {
+      "key": "KAN-68",
+      "type": "Subtask",
+      "title": "H&M.lv login and session management",
+      "fingerprint": "887e0a916104cba902a19e414a082511cc2b63edbaa2db0a5514dbce13fa10e9",
+      "url": "https://factory2.atlassian.net/browse/KAN-68",
+      "parentKey": "KAN-67"
+    },
+    {
+      "key": "KAN-69",
+      "type": "Subtask",
+      "title": "H&M.lv search automation",
+      "fingerprint": "da08d05fac4688dd770aa3f7e8510119591268bdd7c26d767b876afeb746c090",
+      "url": "https://factory2.atlassian.net/browse/KAN-69",
+      "parentKey": "KAN-67"
+    },
+    {
+      "key": "KAN-70",
+      "type": "Subtask",
+      "title": "H&M.lv cart-staging recipe",
+      "fingerprint": "473051277662b1926c94087c0bb848d4806b32be3b76a760051f8c9c2f4622f0",
+      "url": "https://factory2.atlassian.net/browse/KAN-70",
+      "parentKey": "KAN-67"
+    },
+    {
+      "key": "KAN-71",
+      "type": "Task",
+      "title": "Multi-retailer parallel search and proposal assembly",
+      "fingerprint": "bd84d4aa7f0f416336145f28da07b0945dbb793b071eff7e94151af6eb10d0ab",
+      "url": "https://factory2.atlassian.net/browse/KAN-71",
+      "parentKey": "KAN-54"
+    },
+    {
+      "key": "KAN-72",
+      "type": "Subtask",
+      "title": "Implement parallel search orchestration",
+      "fingerprint": "18a175dbc93ecb2e29b34b56207d6b7d612358ac8c0f5654f73d150dbc8bdf76",
+      "url": "https://factory2.atlassian.net/browse/KAN-72",
+      "parentKey": "KAN-71"
+    },
+    {
+      "key": "KAN-73",
+      "type": "Subtask",
+      "title": "Score and sort multi-retailer cards",
+      "fingerprint": "4136c74f7f719106cc50bfb0cf78d2833815ef2f8a0de03de1a40cd914855d8c",
+      "url": "https://factory2.atlassian.net/browse/KAN-73",
+      "parentKey": "KAN-71"
+    },
+    {
+      "key": "KAN-74",
+      "type": "Epic",
+      "title": "M-F — Failures, circuit breaker, audit",
+      "fingerprint": "91fd330cc4783570fbd1cbf384a400f6c39f2dff2a08ec8f8678e72f08dc42a3",
+      "url": "https://factory2.atlassian.net/browse/KAN-74"
+    },
+    {
+      "key": "KAN-75",
+      "type": "Task",
+      "title": "Failure card UI",
+      "fingerprint": "ce73bb99982dd6d99f4fe007204aea725315792906a9611fbd4da185e1c12831",
+      "url": "https://factory2.atlassian.net/browse/KAN-75",
+      "parentKey": "KAN-74"
+    },
+    {
+      "key": "KAN-76",
+      "type": "Subtask",
+      "title": "Build failure card component",
+      "fingerprint": "1adb2cfc16ccf42d806ab87c13145b8fa0443c307fffab865968b3d273f69137",
+      "url": "https://factory2.atlassian.net/browse/KAN-76",
+      "parentKey": "KAN-75"
+    },
+    {
+      "key": "KAN-77",
+      "type": "Subtask",
+      "title": "Foreground visible browser on staging failure",
+      "fingerprint": "9926114918bee4568f2427cae4474e86efd02dcd4efe82953c7137ea5027c733",
+      "url": "https://factory2.atlassian.net/browse/KAN-77",
+      "parentKey": "KAN-75"
+    },
+    {
+      "key": "KAN-78",
+      "type": "Task",
+      "title": "Feed items for shopping events",
+      "fingerprint": "35b8809f93224ce2d934a8ad044b6d918268cfc485e4ea31b4a115b4ccdcbffd",
+      "url": "https://factory2.atlassian.net/browse/KAN-78",
+      "parentKey": "KAN-74"
+    },
+    {
+      "key": "KAN-79",
+      "type": "Subtask",
+      "title": "Emit staging and failure Feed items",
+      "fingerprint": "adb75014c7581a697c7bf2a1678244f317da0fa11071951fac6d82970b6b7e4f",
+      "url": "https://factory2.atlassian.net/browse/KAN-79",
+      "parentKey": "KAN-78"
+    },
+    {
+      "key": "KAN-80",
+      "type": "Task",
+      "title": "Per-retailer circuit breaker (discovery-only mode)",
+      "fingerprint": "ed0cef3b146f80853d50657833838cc3423424831ba254e546f66b583ee0a21d",
+      "url": "https://factory2.atlassian.net/browse/KAN-80",
+      "parentKey": "KAN-74"
+    },
+    {
+      "key": "KAN-81",
+      "type": "Subtask",
+      "title": "Implement failure counter and discovery-only state machine",
+      "fingerprint": "d2758837ae0e6fff47572cdb792f4001ae70bf11b43017c250719e7eb474656b",
+      "url": "https://factory2.atlassian.net/browse/KAN-81",
+      "parentKey": "KAN-80"
+    },
+    {
+      "key": "KAN-82",
+      "type": "Subtask",
+      "title": "Update proposal card for discovery-only mode",
+      "fingerprint": "2d683f26df049dc6e0ef4c078c64766a3ee5cb4b3d1492b7c20508e35210ab33",
+      "url": "https://factory2.atlassian.net/browse/KAN-82",
+      "parentKey": "KAN-80"
+    },
+    {
+      "key": "KAN-83",
+      "type": "Task",
+      "title": "Settings → Privacy → Shopping activity audit pane: populated",
+      "fingerprint": "9e40efbc6bfb028bf6ecd5727dc86a67aaf9efeb476401a513c399d2719d26c7",
+      "url": "https://factory2.atlassian.net/browse/KAN-83",
+      "parentKey": "KAN-74"
+    },
+    {
+      "key": "KAN-84",
+      "type": "Subtask",
+      "title": "Wire audit log to pane UI",
+      "fingerprint": "9212f376538c12af9d6ae47449ed390af11381d0d818719b44622af709ee67cb",
+      "url": "https://factory2.atlassian.net/browse/KAN-84",
+      "parentKey": "KAN-83"
+    },
+    {
+      "key": "KAN-85",
+      "type": "Epic",
+      "title": "M-G — Inbox integration",
+      "fingerprint": "f4ed46e05b0f6c33af1bc829b2019c8dc3b5b6d3424e5217165135c7d7a7880d",
+      "url": "https://factory2.atlassian.net/browse/KAN-85"
+    },
+    {
+      "key": "KAN-86",
+      "type": "Task",
+      "title": "Shopping intent classifier for Inbox",
+      "fingerprint": "858b066572d71780e2a09d09957d1c56e09259d51177139a045a32a4d449add8",
+      "url": "https://factory2.atlassian.net/browse/KAN-86",
+      "parentKey": "KAN-85"
+    },
+    {
+      "key": "KAN-87",
+      "type": "Subtask",
+      "title": "Implement and tune shopping intent classifier",
+      "fingerprint": "d4c07d80cd5c34fe48d0b47fa7e2ccd086a70a3def2a30a2cbaa22fd5289ba18",
+      "url": "https://factory2.atlassian.net/browse/KAN-87",
+      "parentKey": "KAN-86"
+    },
+    {
+      "key": "KAN-88",
+      "type": "Task",
+      "title": "Inbox 5th triage action: Shop",
+      "fingerprint": "cdfcd90a2dd52a060f9519aa7da7332c378211d11b824c1a7d9bb161e51b5429",
+      "url": "https://factory2.atlassian.net/browse/KAN-88",
+      "parentKey": "KAN-85"
+    },
+    {
+      "key": "KAN-89",
+      "type": "Subtask",
+      "title": "Add Shop to triage action list and keyboard shortcut",
+      "fingerprint": "fc9081797a23e2cce93236736f1df8e78abc6be62f0e1179234a9e88b8129f89",
+      "url": "https://factory2.atlassian.net/browse/KAN-89",
+      "parentKey": "KAN-88"
+    },
+    {
+      "key": "KAN-90",
+      "type": "Subtask",
+      "title": "Open pre-seeded shopping chat from Shop triage",
+      "fingerprint": "d34284ba4a63c3ee618277ad125e39101075ecfe43ac9126ef60fa03f21169e9",
+      "url": "https://factory2.atlassian.net/browse/KAN-90",
+      "parentKey": "KAN-88"
+    },
+    {
+      "key": "KAN-91",
+      "type": "Epic",
+      "title": "M-H — Safety polish",
+      "fingerprint": "7faef858ee888670d8390b93fb6e1113068d632c3079108a13a4a332a7b68325",
+      "url": "https://factory2.atlassian.net/browse/KAN-91"
+    },
+    {
+      "key": "KAN-92",
+      "type": "Task",
+      "title": "Per-item ceiling type-to-confirm (above €500)",
+      "fingerprint": "78f91bcbe6ee403400827298b839dcf0f9d9723871bc5a58d59e8f0ae60520d2",
+      "url": "https://factory2.atlassian.net/browse/KAN-92",
+      "parentKey": "KAN-91"
+    },
+    {
+      "key": "KAN-93",
+      "type": "Subtask",
+      "title": "Implement type-to-confirm gate in proposal card",
+      "fingerprint": "2a4aef4bdac49a513c340aeb4cbab91b00a74ac1add856a7ff69223a78c30d3d",
+      "url": "https://factory2.atlassian.net/browse/KAN-93",
+      "parentKey": "KAN-92"
+    },
+    {
+      "key": "KAN-94",
+      "type": "Task",
+      "title": "Action caps enforcement",
+      "fingerprint": "39c128cca7dafc68d1de74f069a766e50414aa7dbb6a3432561824c7b77fc4ae",
+      "url": "https://factory2.atlassian.net/browse/KAN-94",
+      "parentKey": "KAN-91"
+    },
+    {
+      "key": "KAN-95",
+      "type": "Subtask",
+      "title": "Implement and enforce all three action caps",
+      "fingerprint": "7779c3c0a088a5a3e036f18d19c5ce29ec7ddf704c8664cb1148226fd51d77d2",
+      "url": "https://factory2.atlassian.net/browse/KAN-95",
+      "parentKey": "KAN-94"
+    },
+    {
+      "key": "KAN-96",
+      "type": "Task",
+      "title": "Wipe all data: shopping data extension",
+      "fingerprint": "2e87bc352d4c02dae123871cf5e5d05c6fe6642c792aa792084dc2ded85485b6",
+      "url": "https://factory2.atlassian.net/browse/KAN-96",
+      "parentKey": "KAN-91"
+    },
+    {
+      "key": "KAN-97",
+      "type": "Subtask",
+      "title": "Extend Wipe all data to cover shopping data",
+      "fingerprint": "3fce60c7322a1a1183c8a90d3a4b4da428c7e5215c47a44477e44de8b700e901",
+      "url": "https://factory2.atlassian.net/browse/KAN-97",
+      "parentKey": "KAN-96"
+    },
+    {
+      "key": "KAN-98",
+      "type": "Task",
+      "title": "Anti-bot challenge: user-handoff UX",
+      "fingerprint": "8d8d505452aa03717b8e1d84554c6d1ec613ef951aba92ac4eeec0f75b0797d8",
+      "url": "https://factory2.atlassian.net/browse/KAN-98",
+      "parentKey": "KAN-91"
+    },
+    {
+      "key": "KAN-99",
+      "type": "Subtask",
+      "title": "Detect challenge and emit waiting state to chat",
+      "fingerprint": "d3fceeb2730acc1b60e360bf3182d118af1b12e35236a2981228b35aa0cf8307",
+      "url": "https://factory2.atlassian.net/browse/KAN-99",
+      "parentKey": "KAN-98"
+    },
+    {
+      "key": "KAN-100",
+      "type": "Subtask",
+      "title": "Implement resume-on-challenge-dismissed flow",
+      "fingerprint": "1bbb253608a09b6480e5f247ddad671c5022fca28a0c13579c9525c3d5d66968",
+      "url": "https://factory2.atlassian.net/browse/KAN-100",
+      "parentKey": "KAN-98"
+    }
+  ]
+}
