@@ -168,6 +168,7 @@ async function runApplyCommand(args: string[]) {
 
   const ledger = await readJsonOrDefault<{ created: CreatedIssue[] }>(ledgerPath, { created: [] });
   const created: CreatedIssue[] = [];
+  const reused: CreatedIssue[] = [];
 
   for (const epic of plan.epics) {
     const epicFingerprint = fingerprintOf("Epic", plan.source_file, epic.title, epic.source_sections.join("|"));
@@ -177,6 +178,7 @@ async function runApplyCommand(args: string[]) {
       created.push(epicIssue);
       console.log(`Created Epic ${epicIssue.key}: ${epicIssue.title}`);
     } else {
+      reused.push(epicIssue);
       console.log(`Reusing Epic ${epicIssue.key}: ${epicIssue.title}`);
     }
 
@@ -188,6 +190,7 @@ async function runApplyCommand(args: string[]) {
         created.push(taskIssue);
         console.log(`Created Task ${taskIssue.key}: ${taskIssue.title}`);
       } else {
+        reused.push(taskIssue);
         console.log(`Reusing Task ${taskIssue.key}: ${taskIssue.title}`);
       }
 
@@ -206,6 +209,7 @@ async function runApplyCommand(args: string[]) {
           created.push(subtaskIssue);
           console.log(`Created Subtask ${subtaskIssue.key}: ${subtaskIssue.title}`);
         } else {
+          reused.push(subtaskIssue);
           console.log(`Reusing Subtask ${subtaskIssue.key}: ${subtaskIssue.title}`);
         }
       }
@@ -220,6 +224,20 @@ async function runApplyCommand(args: string[]) {
   console.log("Created issues summary:");
   for (const item of created) {
     console.log(`- ${item.key} (${item.type}) ${item.url}`);
+  }
+  console.log("");
+  console.log("E2E task summary:");
+  const e2eCreated = created.filter((item) => item.type === "Task" && item.title.startsWith("E2E: "));
+  const e2eReused = reused.filter((item) => item.type === "Task" && item.title.startsWith("E2E: "));
+  if (!e2eCreated.length && !e2eReused.length) {
+    console.log("- No E2E tasks were created or reused.");
+  } else {
+    for (const item of e2eCreated) {
+      console.log(`- created ${item.key} ${item.url}`);
+    }
+    for (const item of e2eReused) {
+      console.log(`- reused ${item.key} ${item.url}`);
+    }
   }
 }
 
@@ -302,12 +320,13 @@ function extractOpenQuestions(sections: Section[]): string[] {
 
 function buildEpics(areaSections: Section[], allSections: Section[]): PlanEpic[] {
   if (areaSections.length === 0) {
+    const fallbackTitle = "Requirements Delivery";
     return [
       {
-        title: "Requirements Delivery",
+        title: fallbackTitle,
         description: "Primary implementation area derived from product requirements.",
         source_sections: ["Document"],
-        tasks: [defaultTask()],
+        tasks: ensureE2ETask(fallbackTitle, [defaultTask()]),
       },
     ];
   }
@@ -317,7 +336,7 @@ function buildEpics(areaSections: Section[], allSections: Section[]): PlanEpic[]
     const acceptance = findAcceptanceCriteriaForArea(section.heading, allSections);
     const taskSourceSections = [section.heading];
 
-    const tasks: PlanTask[] = bullets.length
+    const tasksFromBullets: PlanTask[] = bullets.length
       ? bullets.map((bullet) => {
           const complexity = inferComplexity(bullet);
           return {
@@ -345,6 +364,8 @@ function buildEpics(areaSections: Section[], allSections: Section[]): PlanEpic[]
           };
         })
       : [defaultTask(section.heading)];
+
+    const tasks = ensureE2ETask(section.heading, tasksFromBullets);
 
     return {
       title: section.heading,
@@ -398,6 +419,30 @@ function defaultTask(sourceSection = "Document"): PlanTask {
       },
     ],
   };
+}
+
+function buildE2ETask(epicTitle: string, sourceSections: string[]): PlanTask {
+  return {
+    title: `E2E: ${epicTitle}`,
+    description: `Execute end-to-end validation for epic "${epicTitle}" across integrated flows.`,
+    acceptance_criteria: [
+      `Critical user flows for "${epicTitle}" pass in end-to-end testing.`,
+      "Integration behavior and regressions are verified.",
+      "E2E evidence and outcomes are attached to the task.",
+    ],
+    dependencies: [],
+    priority: "medium",
+    complexity: "medium",
+    source_sections: sourceSections,
+    subtasks: [],
+  };
+}
+
+function ensureE2ETask(epicTitle: string, tasks: PlanTask[]): PlanTask[] {
+  const expectedTitle = `e2e: ${epicTitle}`.toLowerCase();
+  const alreadyExists = tasks.some((task) => task.title.trim().toLowerCase() === expectedTitle);
+  if (alreadyExists) return tasks;
+  return [...tasks, buildE2ETask(epicTitle, [epicTitle])];
 }
 
 function inferComplexity(text: string): Complexity {
