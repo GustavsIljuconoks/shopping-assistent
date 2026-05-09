@@ -3,7 +3,8 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import crypto from "node:crypto";
-import Ajv from "ajv";
+import { Ajv } from "ajv";
+import type { AnySchema, ErrorObject } from "ajv";
 
 type Complexity = "small" | "medium" | "large";
 type Priority = "low" | "medium" | "high";
@@ -470,11 +471,11 @@ function trimSentence(value: string, max: number): string {
 
 function validatePlan(plan: JiraPlan, schema: unknown) {
   const ajv = new Ajv({ allErrors: true, strict: false });
-  const validate = ajv.compile(schema);
+  const validate = ajv.compile(schema as AnySchema);
   const valid = validate(plan);
   if (valid) return;
 
-  const details = (validate.errors ?? []).map((e) => `${e.instancePath || "/"} ${e.message ?? "invalid"}`).join("; ");
+  const details = (validate.errors ?? []).map((e: ErrorObject) => `${e.instancePath || "/"} ${e.message ?? "invalid"}`).join("; ");
   throw new Error(`Plan validation failed: ${details}`);
 }
 
